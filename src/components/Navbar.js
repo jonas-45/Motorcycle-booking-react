@@ -49,8 +49,8 @@ const Navbar = ({ isAuthenticated, username }) => {
 };
 
 const mapStateToProps = (state) => ({
-  isAuthenticated: state.isAuthenticated,
-  username: state.username,
+  isAuthenticated: state.auth.isAuthenticated,
+  username: state.auth.username,
 });
 
 export default connect(mapStateToProps)(Navbar);
