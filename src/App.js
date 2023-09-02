@@ -10,6 +10,7 @@ function App() {
       <Routes> {/* Use Routes instead of Switch */}
         <Route path="/" element={<Login />} />
         <Route path="/home" element={<Home />} />
+        <Route path="/home/*" element={<Home />} />
         <Route path="/signout" element={<Signout />} />
       </Routes>
     </Router>

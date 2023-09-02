@@ -1,47 +1,56 @@
-import { NavLink, Routes, Route } from 'react-router-dom';
+import { NavLink, Routes, Route, Outlet } from 'react-router-dom';
 import Motorcycles from './Motorcycles';
 import Reserve from './Reserve';
 import Reservations from './Reservations';
 import AddMotorcycle from './AddMotorcycle';
 import DeleteMotorcycle from './DeleteMotorcycle';
+import { connect } from 'react-redux';
 
-const Navbar = () => (
-  <nav>
-    <ul>
-      <li>
-        <NavLink to="/motorcycles">
-          Motorcycles
-        </NavLink>
-      </li>
-      <li>
-        <NavLink to="/reserve">
-          Reserve
-        </NavLink>
-      </li>
-      <li>
-        <NavLink to="/reservations">
-          My Reservations
-        </NavLink>
-      </li>
-      <li>
-        <NavLink to="/add-motorcycle">
-          Add Motorcycle
-        </NavLink>
-      </li>
-      <li>
-        <NavLink to="/delete-motorcycle">
-          Delete Motorcycle
-        </NavLink>
-      </li>
-    </ul>
-    <Routes>
-      <Route path="/motorcycles" element={<Motorcycles />} />
-      <Route path="/reserve" element={<Reserve />} />
-      <Route path="/reservations" element={<Reservations />} />
-      <Route path="/add-motorcycle" element={<AddMotorcycle />} />
-      <Route path="/delete-motorcycle" element={<DeleteMotorcycle />} />
-    </Routes>
-  </nav>
-);
+const Navbar = ({ isAuthenticated, username }) => {
+  return (
+    <nav>
+      <ul>
+        <li>
+          <NavLink to="/motorcycles">
+            Motorcycles
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="/reserve">
+            Reserve
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="/reservations">
+            My Reservations
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="/add-motorcycle">
+            Add Motorcycle
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="/delete-motorcycle">
+            Delete Motorcycle
+          </NavLink>
+        </li>
+      </ul>
+      <Outlet /> {/* Use Outlet to render child routes */}
+      <Routes>
+        <Route path="/motorcycles" element={<Motorcycles />} />
+        <Route path="/reserve" element={<Reserve />} />
+        <Route path="/reservations" element={<Reservations />} />
+        <Route path="/add-motorcycle" element={<AddMotorcycle />} />
+        <Route path="/delete-motorcycle" element={<DeleteMotorcycle />} />
+      </Routes>
+    </nav>
+  );
+};
 
-export default Navbar;
+const mapStateToProps = (state) => ({
+  isAuthenticated: state.isAuthenticated,
+  username: state.username,
+});
+
+export default connect(mapStateToProps)(Navbar);
