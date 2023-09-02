@@ -1,0 +1,137 @@
+.motorcycles-main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.card-link {
+  text-decoration: none;
+  color: #000;
+}
+
+.page-body {
+  display: flex;
+  background-color: #eee;
+  flex-wrap: wrap;
+  height: 100%;
+  position: relative;
+}
+
+.title-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+}
+
+.motorcycles-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 1em;
+  margin: 0;
+}
+
+.card-img {
+  width: 70%;
+  border-radius: 50%;
+}
+
+/* Desktop-specific styles */
+@media (min-width: 768px) {
+  .title {
+    font-size: xx-large;
+    margin-bottom: 0.5rem;
+  }
+
+  .sub-title {
+    margin-top: 0;
+    margin-bottom: 2rem;
+    color: gray;
+  }
+
+  .motorcycles-main-container {
+    display: grid;
+    grid-template-columns: 15vw 85vw;
+    grid-template-rows: 100%;
+  }
+
+  .page-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    position: relative;
+  }
+
+  .title-container {
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+  }
+
+  .motorcycles-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 0;
+  }
+
+  .loading-indicator {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    align-items: center;
+  }
+
+  .card-img {
+    width: 70%;
+    border-radius: 50%;
+  }
+
+  .pagination-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 10px;
+  }
+
+  .pagination-button.previous {
+    order: 1;
+  }
+
+  .pagination-button.next {
+    order: 2;
+  }
+
+  .pagination-button {
+    background-color: #048a09;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+
+  .pagination-button:hover {
+    background-color: #43e412;
+  }
+
+  .pagination-button.disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+}
