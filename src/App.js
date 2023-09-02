@@ -7,9 +7,12 @@ import Signout from './components/Signout';
 function App() {
   return (
     <Router>
-      <Routes> {/* Use Routes instead of Switch */}
+      <Routes>
+        {' '}
+        {/* Use Routes instead of Switch */}
         <Route path="/" element={<Login />} />
         <Route path="/home" element={<Home />} />
+        <Route path="/motorcycles" element={<Motorcycles />} />
         <Route path="/signout" element={<Signout />} />
       </Routes>
     </Router>
