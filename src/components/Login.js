@@ -1,9 +1,11 @@
 // Login.js
 import React, { useState } from 'react';
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom'; // Use useNavigate instead of useHistory
+import { useNavigate } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { login } from '../redux/actions';
 
-function Login() {
+const Login = ({ dispatch }) => {
   const [credentials, setCredentials] = useState({ username: '' });
   const navigate = useNavigate(); // Initialize navigate
 
@@ -28,7 +30,8 @@ function Login() {
       // In a real application, you would perform actual authentication here
       const isAuthenticated = true;
       if (isAuthenticated) {
-        navigate('/home'); // Redirect to Home page after successful login using navigate
+        dispatch(login(credentials.username)); // Dispatch the login action
+        navigate('/home');
       } else {
         console.log('Authentication failed');
       }
@@ -54,4 +57,4 @@ function Login() {
   );
 }
 
-export default Login;
+export default connect()(Login);
