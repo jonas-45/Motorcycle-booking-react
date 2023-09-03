@@ -1,4 +1,5 @@
-import { NavLink, Routes, Route, Outlet } from 'react-router-dom';
+import { NavLink, Routes, Route, Outlet, useLocation } from 'react-router-dom';
+import React, { useEffect } from 'react';
 import Motorcycles from './Motorcycles';
 import Reserve from './Reserve';
 import Reservations from './Reservations';
@@ -9,6 +10,31 @@ import './navbar.css';
 import SignoutButton from './SignoutButton';
 
 const Navbar = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    if(location.pathname === "/motorcycles") {
+      const div = document.querySelector(".motorcycle-li");
+      div.classList.add("active-link");
+    }
+    if(location.pathname === "/reserve") {
+      const div = document.querySelector(".reserve-li");
+      div.classList.add("active-link");
+    }
+    if(location.pathname === "/reservation") {
+      const div = document.querySelector(".reservation-li");
+      div.classList.add("active-link");
+    }
+    if(location.pathname === "/add-motorcycle") {
+      const div = document.querySelector(".add-motorcycle-li");
+      div.classList.add("active-link");
+    }
+    if(location.pathname === "/delete-motorcycle") {
+      const div = document.querySelector(".delete-motorcycle-li");
+      div.classList.add("active-link");
+    }
+  }, [location]);
+
   return (
   <nav className="navbar">
     <ul className="nav-list">
@@ -20,28 +46,28 @@ const Navbar = () => {
             <img className="home-link" src="./home.png" alt="home-link" />
           </NavLink>
         </li>
-        <li>
-          <NavLink to="/motorcycles" className="link" activeClassName="active-link">
+        <li className="motorcycle-li">
+          <NavLink to="/motorcycles" className="link">
             MOTORCYCLES
           </NavLink>
         </li>
-        <li>
-          <NavLink to="/reserve" className="link" activeClassName="active-link">
+        <li className="reserve-li">
+          <NavLink to="/reserve" className="link">
             RESERVE
           </NavLink>
         </li>
-        <li>
-          <NavLink to="/reservations" className="link" activeClassName="active-link">
+        <li className="reservation-li">
+          <NavLink to="/reservations" className="link">
             MY RESERVATIONS
           </NavLink>
         </li>
-        <li>
-          <NavLink to="/add-motorcycle" className="link" activeClassName="active-link">
+        <li className="add-motorcycle-li">
+          <NavLink to="/add-motorcycle" className="link">
             ADD MOTORCYCLE
           </NavLink>
         </li>
-        <li>
-          <NavLink to="/delete-motorcycle" className="link" activeClassName="active-link">
+        <li className="delete-motorcycle-li">
+          <NavLink to="/delete-motorcycle" className="link">
             DELETE MOTORCYCLE
           </NavLink>
         </li>
@@ -51,6 +77,7 @@ const Navbar = () => {
       </ul>
       <Outlet />
       <Routes>
+        <Route path="/motorcycles/*" element={<Motorcycles />} />
         <Route path="/motorcycles" element={<Motorcycles />} />
         <Route path="/reserve" element={<Reserve />} />
         <Route path="/reservations" element={<Reservations />} />
