@@ -1,0 +1,53 @@
+/* Navbar Styles */
+.navbar {
+  background-color: white;
+  top: 0;
+  z-index: 100;
+  position:absolute;
+  width: 15rem;
+  margin-right: 2rem;
+  height: 100lvh;
+}
+
+.logo-li {
+  margin-bottom: 4rem;
+}
+
+.nav-list {
+  list-style: none;
+}
+
+.nav-list li {
+  height: 2rem;
+  width: 12rem;
+  padding-top: 1rem;
+  padding-left: 0.5rem;
+}
+
+li * {
+  text-decoration: none;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1.2rem;
+  font-weight: 900;
+  color: black;
+}
+
+.active-link {
+  background-color: #97bf0f;
+}
+
+.active-link * {
+  color: white;
+}
+
+.home-li {
+  padding: 1.5rem;
+}
+
+.home-link {
+  width: 3.5rem;
+}
+
+.logo {
+  width: 50%;
+}
