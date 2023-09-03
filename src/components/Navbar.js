@@ -9,7 +9,7 @@ import './navbar.css';
 import SignoutButton from './SignoutButton';
 
 const Navbar = () => {
-  return ( // Add a return statement to return JSX
+  return (
   <nav className="navbar">
     <ul className="nav-list">
       <li className="logo-li">
@@ -45,9 +45,11 @@ const Navbar = () => {
             DELETE MOTORCYCLE
           </NavLink>
         </li>
+        <li>
+          <SignoutButton />
+        </li>
       </ul>
       <Outlet />
-      <SignoutButton />
       <Routes>
         <Route path="/motorcycles" element={<Motorcycles />} />
         <Route path="/reserve" element={<Reserve />} />

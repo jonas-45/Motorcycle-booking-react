@@ -4,6 +4,7 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { login } from '../redux/actions';
+import './login.css';
 
 const Login = ({ dispatch }) => {
   const [credentials, setCredentials] = useState({ username: '' });
@@ -41,8 +42,10 @@ const Login = ({ dispatch }) => {
   };
 
   return (
-    <div>
-      <h1>Login</h1>
+    <div className="main-div">
+      <div className="login-div">
+      <img src="./logo.png" className="logo" alt="logo" />
+      <h1>L O G I N</h1>
       <form onSubmit={handleSubmit}>
         <input
           type="text" // Use 'text' instead of 'username'
@@ -54,6 +57,8 @@ const Login = ({ dispatch }) => {
         <button type="submit">Login</button>
       </form>
     </div>
+    </div>
+
   );
 }
 
