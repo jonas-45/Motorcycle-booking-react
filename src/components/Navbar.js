@@ -8,7 +8,7 @@ import { connect } from 'react-redux';
 import './navbar.css';
 import SignoutButton from './SignoutButton';
 
-const Navbar = ({ isAuthenticated}) => {
+const Navbar = () => {
   return ( // Add a return statement to return JSX
   <nav className="navbar">
     <ul className="nav-list">
@@ -47,7 +47,7 @@ const Navbar = ({ isAuthenticated}) => {
         </li>
       </ul>
       <Outlet />
-      {isAuthenticated && <SignoutButton />}
+      <SignoutButton />
       <Routes>
         <Route path="/motorcycles" element={<Motorcycles />} />
         <Route path="/reserve" element={<Reserve />} />

@@ -1,13 +1,16 @@
 // SignoutButton.js
 import React from 'react';
 import { connect } from 'react-redux';
-import { logout } from '../redux/actions'; // Import your logout action
+import { logout } from '../redux/actions';
+import { useNavigate } from 'react-router-dom';
 
 const SignoutButton = ({ dispatch }) => {
+  const navigate = useNavigate();
+
   const handleSignout = () => {
     // Dispatch the logout action to update the Redux state
     dispatch(logout());
-    // You may also want to perform any additional signout logic here, such as clearing user data from localStorage or sending a signout request to your server.
+    navigate('/');
   };
 
   return (
