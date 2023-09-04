@@ -1,9 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit';
 import motorcycleReducer from './motorcycles/motorcycleSlice';
+import authReducer from '../redux/users/userSlice';
 
 const store = configureStore({
   reducer: {
     motorcycles: motorcycleReducer,
+    auth: authReducer,
   },
 });
 

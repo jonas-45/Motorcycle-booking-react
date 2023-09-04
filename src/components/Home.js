@@ -2,19 +2,13 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import Navbar from './Navbar';
+import './home.css';
 
 function Home() {
-  const navigate = useNavigate();
-
-  const handleSignout = () => {
-    navigate('/signout');
-  };
-
   return (
-    <div>
-      <h1>Welcome to the Home Page</h1>
+    <div className="home-div">
       <Navbar />
-      <button onClick={handleSignout}>Sign Out</button>
+      <img src="./giphy.gif" className="rider-img" alt="bike rider" />
     </div>
   );
 }

@@ -1,9 +1,12 @@
 // Login.js
 import React, { useState } from 'react';
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom'; // Use useNavigate instead of useHistory
+import { useNavigate } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { login } from '../redux/actions';
+import './login.css';
 
-function Login() {
+const Login = ({ dispatch }) => {
   const [credentials, setCredentials] = useState({ username: '' });
   const navigate = useNavigate(); // Initialize navigate
 
@@ -28,7 +31,8 @@ function Login() {
       // In a real application, you would perform actual authentication here
       const isAuthenticated = true;
       if (isAuthenticated) {
-        navigate('/home'); // Redirect to Home page after successful login using navigate
+        dispatch(login(credentials.username)); // Dispatch the login action
+        navigate('/home');
       } else {
         console.log('Authentication failed');
       }
@@ -38,8 +42,10 @@ function Login() {
   };
 
   return (
-    <div>
-      <h1>Login</h1>
+    <div className="main-div">
+      <div className="login-div">
+      <img src="./logo.png" className="logo" alt="logo" />
+      <h1>L O G I N</h1>
       <form onSubmit={handleSubmit}>
         <input
           type="text" // Use 'text' instead of 'username'
@@ -51,7 +57,9 @@ function Login() {
         <button type="submit">Login</button>
       </form>
     </div>
+    </div>
+
   );
 }
 
-export default Login;
+export default connect()(Login);
