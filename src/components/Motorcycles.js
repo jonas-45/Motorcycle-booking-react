@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import PropTypes from 'prop-types';
 import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import '../stylesheets/motorcycles.css';
@@ -26,7 +27,9 @@ const Motorcycles = () => {
     dispatch(getMotorcycles());
   }, [dispatch]);
 
-  const paginate = (array, page_size, page_number) => array.slice((page_number - 1) * page_size, page_number * page_size);
+  const paginate = (array, pageSize, pageNumber) => (
+    array.slice((pageNumber - 1) * pageSize, pageNumber * pageSize)
+  );
 
   const paginatedMotorcycles = paginate(
     motorcycles.motorcycles,
@@ -77,6 +80,7 @@ const Motorcycles = () => {
               !hasPrevPage ? 'disabled' : ''
             }`}
             disabled={!hasPrevPage}
+            type="button"
           >
             Previous
           </button>
@@ -86,6 +90,7 @@ const Motorcycles = () => {
               !hasNextPage ? 'disabled' : ''
             }`}
             disabled={!hasNextPage}
+            type="button"
           >
             Next
           </button>
@@ -93,6 +98,16 @@ const Motorcycles = () => {
       </section>
     </div>
   );
+};
+
+Motorcycle.propTypes = {
+  motor: PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    name: PropTypes.string.isRequired,
+    image: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+    // Add more specific PropTypes for the properties of the motor object
+  }).isRequired,
 };
 
 export default Motorcycles;

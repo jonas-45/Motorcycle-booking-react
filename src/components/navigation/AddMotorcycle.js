@@ -17,7 +17,7 @@ const AddMotorcycle = () => {
       try {
         const response = await fetch('/api/motorcycles');
         const motorcycles = await response.json();
-        const currentUser = motorcycle[0].user_id;
+        const currentUser = motorcycles[0].user_id;
 
         setMotorcycleData((prevMotorcycleData) => ({
           ...prevMotorcycleData,

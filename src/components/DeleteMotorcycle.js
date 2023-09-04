@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { useDispatch, useSelector } from 'react-redux';
 import { deleteMotorcycle } from '../redux/motorcycles/motorcycleSlice';
 import '../stylesheets/DeleteMotorcycle.css';
@@ -23,6 +24,7 @@ const MotorcycleList = ({ motorcycles }) => {
           <button
             onClick={() => handleDelete(motorcycle.id)}
             className="delete-button"
+            type="button"
           >
             Delete
           </button>
@@ -30,6 +32,17 @@ const MotorcycleList = ({ motorcycles }) => {
       ))}
     </div>
   );
+};
+
+MotorcycleList.propTypes = {
+  motorcycles: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      name: PropTypes.string.isRequired,
+      image: PropTypes.string.isRequired,
+      // Add more specific PropTypes for the properties of your motorcycle object
+    }),
+  ).isRequired,
 };
 
 const DeleteMotorcycle = () => {
