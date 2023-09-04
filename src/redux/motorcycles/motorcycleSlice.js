@@ -48,7 +48,7 @@ export const deleteMotorcycle = createAsyncThunk(
       `http://localhost:3000/api/motorcycles/${motorcycleId}`,
       {
         method: 'DELETE',
-      }
+      },
     );
 
     const responseData = await response.json();
@@ -56,7 +56,7 @@ export const deleteMotorcycle = createAsyncThunk(
       throw new Error(responseData.message);
     }
     return motorcycleId; // Return the deleted motorcycleId if successful
-  }
+  },
 );
 const MotorcycleSlice = createSlice({
   name: 'motorcycles',
@@ -102,7 +102,7 @@ const MotorcycleSlice = createSlice({
         return {
           ...state,
           motorcycles: state.motorcycles.filter(
-            (motorcycle) => motorcycle.id !== deletedMotorcycleId
+            (motorcycle) => motorcycle.id !== deletedMotorcycleId,
           ),
           message: 'delete success',
         };
