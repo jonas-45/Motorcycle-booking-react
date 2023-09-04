@@ -2,7 +2,7 @@ import { NavLink, Routes, Route } from 'react-router-dom';
 import Motorcycles from './Motorcycles';
 import Reserve from './Reserve';
 import Reservations from './Reservations';
-import AddMotorcycle from './AddMotorcycle';
+import AddMotorcycle from './AddMotorcyclePage';
 import DeleteMotorcycle from './DeleteMotorcycle';
 
 const Navbar = () => (

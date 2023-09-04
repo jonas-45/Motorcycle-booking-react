@@ -31,7 +31,7 @@ export const postMotorcycles = createAsyncThunk(
       throw new Error(responseData.message);
     }
     return responseData;
-  }
+  },
 );
 
 const initialState = {

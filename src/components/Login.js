@@ -13,7 +13,7 @@ function Login() {
   };
 
   const queryParams = {
-    username: credentials.username
+    username: credentials.username,
   };
 
   const queryString = new URLSearchParams(queryParams).toString();

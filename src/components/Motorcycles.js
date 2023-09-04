@@ -26,14 +26,12 @@ const Motorcycles = () => {
     dispatch(getMotorcycles());
   }, [dispatch]);
 
-  const paginate = (array, page_size, page_number) => {
-    return array.slice((page_number - 1) * page_size, page_number * page_size);
-  };
+  const paginate = (array, page_size, page_number) => array.slice((page_number - 1) * page_size, page_number * page_size);
 
   const paginatedMotorcycles = paginate(
     motorcycles.motorcycles,
     itemsPerPage,
-    currentPage
+    currentPage,
   );
 
   const totalPages = Math.ceil(motorcycles.motorcycles.length / itemsPerPage);
