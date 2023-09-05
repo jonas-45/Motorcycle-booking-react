@@ -26,10 +26,8 @@ const Motorcycles = () => {
   useEffect(() => {
     dispatch(getMotorcycles());
   }, [dispatch]);
-
-  const paginate = (array, pageSize, pageNumber) => (
-    array.slice((pageNumber - 1) * pageSize, pageNumber * pageSize)
-  );
+  // eslint-disable-next-line max-len
+  const paginate = (array, pageSize, pageNumber) => array.slice((pageNumber - 1) * pageSize, pageNumber * pageSize);
 
   const paginatedMotorcycles = paginate(
     motorcycles.motorcycles,
@@ -69,7 +67,17 @@ const Motorcycles = () => {
             <div className="loading-indicator">Loading...</div>
           ) : (
             paginatedMotorcycles.map((motor) => (
-              <Motorcycle key={motor.id} motor={motor} />
+              <Link
+                to={`/motorcycles/${motor.id}/details`}
+                className="card-link"
+                key={motor.id}
+              >
+                <MotorbikeCard
+                  name={motor.name}
+                  imgUrl={motor.image}
+                  description={motor.description}
+                />
+              </Link>
             ))
           )}
         </div>
