@@ -1,9 +1,13 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'; // Import BrowserRouter and Routes
 import Login from './components/Login';
-import Signout from './components/Signout';
 import Motorcycles from './components/Motorcycles';
 import DeleteMotorcycle from './components/DeleteMotorcycle';
+import Reserve from './components/Reserve';
+import Reservations from './components/Reservations';
+import AddMotorcycle from './components/AddMotorcycle';
+import Home from './components/Home';
+import MotorcycleDetail from './components/MotorcycleDetail';
 
 function App() {
   return (
@@ -12,9 +16,12 @@ function App() {
         {' '}
         <Route path="/home/*" element={<Home />} />
         <Route path="/" element={<Login />} />
-        <Route path="/motorcycles" element={<Motorcycles />} />
+        <Route path="/motorcycles/*" element={<Motorcycles />} />
+        <Route path="/motorcycles/:id/details" element={<MotorcycleDetail />} />
+        <Route path="/reserve" element={<Reserve />} />
+        <Route path="/reservations" element={<Reservations />} />
+        <Route path="/add-motorcycle" element={<AddMotorcycle />} />
         <Route path="/delete-motorcycle" element={<DeleteMotorcycle />} />
-        <Route path="/signout" element={<Signout />} />
       </Routes>
     </Router>
   );

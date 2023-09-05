@@ -1,10 +1,7 @@
-import { NavLink, Routes, Route, Outlet, useLocation } from 'react-router-dom';
+import {
+  NavLink, Outlet, useLocation,
+} from 'react-router-dom';
 import React, { useEffect } from 'react';
-import Motorcycles from './Motorcycles';
-import Reserve from './Reserve';
-import Reservations from './Reservations';
-import AddMotorcycle from './AddMotorcycle';
-import DeleteMotorcycle from './DeleteMotorcycle';
 import { connect } from 'react-redux';
 import './navbar.css';
 import SignoutButton from './SignoutButton';
@@ -13,35 +10,35 @@ const Navbar = () => {
   const location = useLocation();
 
   useEffect(() => {
-    if(location.pathname === "/motorcycles") {
-      const div = document.querySelector(".motorcycle-li");
-      div.classList.add("active-link");
+    if (location.pathname === '/motorcycles') {
+      const div = document.querySelector('.motorcycle-li');
+      div.classList.add('active-link');
     }
-    if(location.pathname === "/reserve") {
-      const div = document.querySelector(".reserve-li");
-      div.classList.add("active-link");
+    if (location.pathname === '/reserve') {
+      const div = document.querySelector('.reserve-li');
+      div.classList.add('active-link');
     }
-    if(location.pathname === "/reservation") {
-      const div = document.querySelector(".reservation-li");
-      div.classList.add("active-link");
+    if (location.pathname === '/reservation') {
+      const div = document.querySelector('.reservation-li');
+      div.classList.add('active-link');
     }
-    if(location.pathname === "/add-motorcycle") {
-      const div = document.querySelector(".add-motorcycle-li");
-      div.classList.add("active-link");
+    if (location.pathname === '/add-motorcycle') {
+      const div = document.querySelector('.add-motorcycle-li');
+      div.classList.add('active-link');
     }
-    if(location.pathname === "/delete-motorcycle") {
-      const div = document.querySelector(".delete-motorcycle-li");
-      div.classList.add("active-link");
+    if (location.pathname === '/delete-motorcycle') {
+      const div = document.querySelector('.delete-motorcycle-li');
+      div.classList.add('active-link');
     }
   }, [location]);
 
   return (
-  <nav className="navbar">
-    <ul className="nav-list">
-      <li className="logo-li">
-        <img src="./logo.png" className="logo" alt="logo" />
-      </li>
-      <li className="home-li">
+    <nav className="navbar">
+      <ul className="nav-list">
+        <li className="logo-li">
+          <img src="./logo.png" className="logo" alt="logo" />
+        </li>
+        <li className="home-li">
           <NavLink to="/home">
             <img className="home-link" src="./home.png" alt="home-link" />
           </NavLink>
@@ -76,14 +73,6 @@ const Navbar = () => {
         </li>
       </ul>
       <Outlet />
-      <Routes>
-        <Route path="/motorcycles/*" element={<Motorcycles />} />
-        <Route path="/motorcycles" element={<Motorcycles />} />
-        <Route path="/reserve" element={<Reserve />} />
-        <Route path="/reservations" element={<Reservations />} />
-        <Route path="/add-motorcycle" element={<AddMotorcycle />} />
-        <Route path="/delete-motorcycle" element={<DeleteMotorcycle />} />
-      </Routes>
     </nav>
   );
 };

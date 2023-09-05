@@ -3,10 +3,10 @@
   background-color: white;
   top: 0;
   z-index: 100;
-  position:absolute;
+  position: absolute;
   width: 15rem;
   margin-right: 2rem;
-  height: 100lvh;
+  height: 100vh;
 }
 
 .logo-li {
@@ -26,7 +26,7 @@
 
 li * {
   text-decoration: none;
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 1.2rem;
   font-weight: 900;
   color: black;

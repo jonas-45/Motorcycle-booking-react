@@ -1,3 +1,5 @@
+/* DeleteMotorcycle.css */
+
 .delete-motorcycle-container {
   display: flex;
   flex-direction: column;
@@ -5,18 +7,20 @@
   padding: 20px;
 }
 
-.delete-motorcycle-title {
-  font-size: 24px;
-  margin-bottom: 20px;
-}
-
 .motorcycle-list-container {
+  flex-grow: 1;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-template-columns:
+    repeat(
+      auto-fill,
+      minmax(250px, 1fr)
+    ); /* Responsive grid */
+
   gap: 20px;
   justify-items: center;
   align-items: center;
   margin-top: 20px;
+  padding: 0 10px; /* Add padding for mobile spacing */
 }
 
 .motorcycle-item {
@@ -55,9 +59,61 @@
   border-radius: 4px;
   cursor: pointer;
   transition: background-color 0.3s;
-  font-size: 16px;
 }
 
 .delete-button:hover {
   background-color: #ff2f2f;
+}
+
+/* Desktop-specific styles */
+@media (min-width: 768px) {
+  .delete-motorcycle-container {
+    flex-direction: row;
+  }
+
+  .motorcycle-list-container {
+    grid-template-columns: repeat(3, minmax(100px, 1fr));
+    margin-right: 1rem;
+  }
+
+  .pagination-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 10px;
+  }
+
+  .pagination-button.previous {
+    order: 1;
+    margin-right: 40rem;
+    margin-top: 10rem;
+  }
+
+  .pagination-button.next {
+    order: 2;
+    margin-right: 2rem;
+    margin-top: 10rem;
+  }
+
+  .pagination-button {
+    background-color: #049a0c;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+
+  .pagination-button:hover {
+    background-color: #3dd210;
+  }
+
+  .pagination-button.disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
 }

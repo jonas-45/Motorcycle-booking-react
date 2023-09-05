@@ -13,7 +13,7 @@ const MotorbikeCard = ({ name, imgUrl, description }) => (
     />
     <div className="motorbike-details">
       <div className="motorbike-name">{name}</div>
-      <div className="separator"></div>
+      <div className="separator" />
       <div className="motorbike-description">{description}</div>
     </div>
   </div>

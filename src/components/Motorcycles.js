@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import PropTypes from 'prop-types';
 import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import '../stylesheets/motorcycles.css';
@@ -25,15 +26,13 @@ const Motorcycles = () => {
   useEffect(() => {
     dispatch(getMotorcycles());
   }, [dispatch]);
-
-  const paginate = (array, page_size, page_number) => {
-    return array.slice((page_number - 1) * page_size, page_number * page_size);
-  };
+  // eslint-disable-next-line max-len
+  const paginate = (array, pageSize, pageNumber) => array.slice((pageNumber - 1) * pageSize, pageNumber * pageSize);
 
   const paginatedMotorcycles = paginate(
     motorcycles.motorcycles,
     itemsPerPage,
-    currentPage
+    currentPage,
   );
 
   const totalPages = Math.ceil(motorcycles.motorcycles.length / itemsPerPage);
@@ -68,7 +67,17 @@ const Motorcycles = () => {
             <div className="loading-indicator">Loading...</div>
           ) : (
             paginatedMotorcycles.map((motor) => (
-              <Motorcycle key={motor.id} motor={motor} />
+              <Link
+                to={`/motorcycles/${motor.id}/details`}
+                className="card-link"
+                key={motor.id}
+              >
+                <MotorbikeCard
+                  name={motor.name}
+                  imgUrl={motor.image}
+                  description={motor.description}
+                />
+              </Link>
             ))
           )}
         </div>
@@ -79,6 +88,7 @@ const Motorcycles = () => {
               !hasPrevPage ? 'disabled' : ''
             }`}
             disabled={!hasPrevPage}
+            type="button"
           >
             Previous
           </button>
@@ -88,6 +98,7 @@ const Motorcycles = () => {
               !hasNextPage ? 'disabled' : ''
             }`}
             disabled={!hasNextPage}
+            type="button"
           >
             Next
           </button>
@@ -95,6 +106,16 @@ const Motorcycles = () => {
       </section>
     </div>
   );
+};
+
+Motorcycle.propTypes = {
+  motor: PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    name: PropTypes.string.isRequired,
+    image: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+    // Add more specific PropTypes for the properties of the motor object
+  }).isRequired,
 };
 
 export default Motorcycles;
