@@ -57,3 +57,35 @@
     background-color: #0056b3; /* Hover color */
   }
 }
+
+/* Add styles for mobile screens */
+@media (max-width: 767px) {
+  .details-main-container {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .motorcycle-details-container {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    padding-top: 0;
+    padding-bottom: 20px;
+  }
+
+  .motorcycle-details-img {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .navbar {
+    margin-right: 0;
+    margin-bottom: 20px;
+    position: static;
+    width: 100%;
+    text-align: center;
+  }
+}
