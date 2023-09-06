@@ -60,7 +60,7 @@ const MotorcycleDetail = () => {
             {' '}
             days
           </p>
-          <Link to="/reservations" className="motorcycle-reserve-button">
+          <Link to={`/reserve/${motorcycle.id}/${encodeURIComponent(motorcycle.name)}`} className="motorcycle-reserve-button">
             Reserve
           </Link>
         </div>

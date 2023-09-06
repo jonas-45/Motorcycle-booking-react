@@ -76,9 +76,9 @@ const DeleteMotorcycle = () => {
 
   return (
     <div className="delete-motorcycle-container">
-      <section className="nav-container">
+      <div className="nav-container">
         <Navbar />
-      </section>
+      </div>
       <MotorcycleList motorcycles={motorcycles} onDelete={handleDelete} />
       <div className="pagination-container">
         <button
@@ -91,7 +91,6 @@ const DeleteMotorcycle = () => {
         >
           Previous
         </button>
-        <span className="pagination-page">{currentPage}</span>
         <button
           type="button"
           onClick={handleNextPage}

@@ -84,7 +84,7 @@ const Motorcycles = () => {
         <div className="pagination-container">
           <button
             onClick={handlePrevPage}
-            className={`pagination-button previous ${
+            className={`pagination-btn previous ${
               !hasPrevPage ? 'disabled' : ''
             }`}
             disabled={!hasPrevPage}
@@ -94,7 +94,7 @@ const Motorcycles = () => {
           </button>
           <button
             onClick={handleNextPage}
-            className={`pagination-button next ${
+            className={`pagination-btn next ${
               !hasNextPage ? 'disabled' : ''
             }`}
             disabled={!hasNextPage}

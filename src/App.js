@@ -6,7 +6,6 @@ import DeleteMotorcycle from './components/DeleteMotorcycle';
 import Reserve from './components/Reserve';
 import Reservations from './components/Reservations';
 import AddMotorcycle from './components/AddMotorcycle';
-import Home from './components/Home';
 import MotorcycleDetail from './components/MotorcycleDetail';
 
 function App() {
@@ -14,11 +13,10 @@ function App() {
     <Router>
       <Routes>
         {' '}
-        <Route path="/home/*" element={<Home />} />
         <Route path="/" element={<Login />} />
         <Route path="/motorcycles/*" element={<Motorcycles />} />
         <Route path="/motorcycles/:id/details" element={<MotorcycleDetail />} />
-        <Route path="/reserve" element={<Reserve />} />
+        <Route path="/reserve/:id/:name" element={<Reserve />} />
         <Route path="/reservations" element={<Reservations />} />
         <Route path="/add-motorcycle" element={<AddMotorcycle />} />
         <Route path="/delete-motorcycle" element={<DeleteMotorcycle />} />
