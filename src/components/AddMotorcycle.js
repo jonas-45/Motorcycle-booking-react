@@ -70,10 +70,10 @@ const AddMotorcycle = () => {
 
   return (
     <div className="add-motorcycle-main-container">
+      <div className="add-motorcycle-nav-container">
+        <Navbar />
+      </div>
       <div className="add-motorcycle-content">
-        <div className="add-motorcycle-nav-container">
-          <Navbar />
-        </div>
         <div className="add-motorcycle-form-container">
           <h1>Add Motorcycle</h1>
           {successMessage && (
