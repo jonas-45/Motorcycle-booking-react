@@ -62,12 +62,20 @@
     flex-direction: column;
     margin-right: 0;
   }
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> 2b45bfc418a1db1c317f35f008d029cb3a24334d
   .add-motorcycle-form-container {
     flex: none;
     margin-bottom: 2rem;
   }
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> 2b45bfc418a1db1c317f35f008d029cb3a24334d
   .add-motorcycle-button-container {
     flex-direction: column;
     align-items: center;
