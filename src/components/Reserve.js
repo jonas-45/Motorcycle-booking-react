@@ -41,7 +41,7 @@ const Reserve = () => {
       try {
         const response = await fetch(`http://localhost:3000/api/reservations?username=${username}`);
         const reservations = await response.json();
-        const currentUser = reservations[0].user_id;
+        const currentUser = reservations[0].userId;
 
         setReserveData((prevReserveData) => ({
           ...prevReserveData,
@@ -53,7 +53,7 @@ const Reserve = () => {
     };
 
     fetchCurrentUser();
-  }, [username]);
+  }, []);
 
   return (
     <section className="reservation-section">
@@ -62,7 +62,7 @@ const Reserve = () => {
         <div className="add-reservation-form-container">
           <h1 className="text-center">
             Book a
-            {reserveData.name}
+            {reserveData.motorcycle}
             {' '}
             Ride
           </h1>
@@ -80,8 +80,8 @@ const Reserve = () => {
                 <input
                   type="date"
                   id="date"
-                  name="date"
-                  value={reserveData.date}
+                  name="reservation_date"
+                  value={reserveData.reservation_date}
                   onChange={handleChange}
                   required="required"
                   className="add-reservation-input"
