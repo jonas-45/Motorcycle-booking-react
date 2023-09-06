@@ -58,12 +58,10 @@ const ReservationsSlice = createSlice({
   name: 'reservations',
   initialState,
   reducers: {
-    resetMessage: (state) => {
-      return {
-        ...state,
-        message: '',
-      };
-    },
+    resetMessage: (state) => ({
+      ...state,
+      message: '',
+    }),
   },
   extraReducers: (builder) => {
     builder
