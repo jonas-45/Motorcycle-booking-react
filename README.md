@@ -149,7 +149,7 @@ $ npm test
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🔭Future Features <a name="future-features"></a>
-
+- Improve the styling of the pages
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
