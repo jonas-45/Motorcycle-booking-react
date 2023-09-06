@@ -43,6 +43,10 @@ export const submitReservation = createAsyncThunk('user/addReservation', async (
   }
 });
 
+export const resetMessage = () => (dispatch) => {
+  dispatch({ type: 'ReservationsSlice/resetMessage' }); // Replace 'reservations' with your slice name
+};
+
 const initialState = {
   loading: false,
   reservations: [],
@@ -53,7 +57,14 @@ const initialState = {
 const ReservationsSlice = createSlice({
   name: 'reservations',
   initialState,
-  reducers: {},
+  reducers: {
+    resetMessage: (state) => {
+      return {
+        ...state,
+        message: '',
+      };
+    },
+  },
   extraReducers: (builder) => {
     builder
       .addCase(getReservations.pending, (state) => {

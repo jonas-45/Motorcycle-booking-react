@@ -2,13 +2,17 @@ import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import '../stylesheets/reservations.css';
 import { useParams } from 'react-router';
-import { submitReservation } from '../redux/reservations/reservationsSlice';
+import { submitReservation, resetMessage } from '../redux/reservations/reservationsSlice';
 
 const Reserve = () => {
   const dispatch = useDispatch();
   const reserves = useSelector((state) => state.reservations);
   const { id, name } = useParams();
   const username = localStorage.getItem('username');
+
+  useEffect(() => {
+    dispatch(resetMessage());
+  }, [dispatch]);
 
   const [reserveData, setReserveData] = useState({
     reservation_date: '',
@@ -39,16 +43,16 @@ const Reserve = () => {
   useEffect(() => {
     const fetchCurrentUser = async () => {
       try {
-        const response = await fetch(`http://localhost:3000/api/reservations?username=${username}`);
-        const reservations = await response.json();
-        const currentUser = reservations[0].userId;
+        const response = await fetch(`http://localhost:3000/api/users/get_id?username=${username}`);
+        const result = await response.json();
+        const currentUser = result.id;
 
         setReserveData((prevReserveData) => ({
           ...prevReserveData,
           user_id: currentUser,
         }));
       } catch (error) {
-        throw new Error('Saving failed');
+        throw new Error('Saving failed', error);
       }
     };
 
