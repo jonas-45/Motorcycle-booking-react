@@ -1,47 +1,51 @@
-import {
-  NavLink, Outlet, useLocation,
-} from 'react-router-dom';
-import React, { useEffect } from 'react';
-import { connect } from 'react-redux';
+import React, { useState, useEffect } from 'react';
+import { NavLink, useLocation } from 'react-router-dom';
 import './navbar.css';
 import SignoutButton from './SignoutButton';
 
 const Navbar = () => {
   const location = useLocation();
+  const [menuVisible, setMenuVisible] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuVisible(!menuVisible);
+  };
 
   useEffect(() => {
+    // Add active-link class based on the current location
+    const navItems = document.querySelectorAll('.nav-list li');
+    navItems.forEach((item) => item.classList.remove('active-link'));
+
     if (location.pathname === '/motorcycles') {
-      const div = document.querySelector('.motorcycle-li');
-      div.classList.add('active-link');
-    }
-    if (location.pathname === '/reserve') {
-      const div = document.querySelector('.reserve-li');
-      div.classList.add('active-link');
-    }
-    if (location.pathname === '/reservation') {
-      const div = document.querySelector('.reservation-li');
-      div.classList.add('active-link');
-    }
-    if (location.pathname === '/add-motorcycle') {
-      const div = document.querySelector('.add-motorcycle-li');
-      div.classList.add('active-link');
-    }
-    if (location.pathname === '/delete-motorcycle') {
-      const div = document.querySelector('.delete-motorcycle-li');
-      div.classList.add('active-link');
+      document.querySelector('.motorcycle-li').classList.add('active-link');
+    } else if (location.pathname === '/reserve') {
+      document.querySelector('.reserve-li').classList.add('active-link');
+    } else if (location.pathname === '/reservations') {
+      document.querySelector('.reservation-li').classList.add('active-link');
+    } else if (location.pathname === '/add-motorcycle') {
+      document.querySelector('.add-motorcycle-li').classList.add('active-link');
+    } else if (location.pathname === '/delete-motorcycle') {
+      document
+        .querySelector('.delete-motorcycle-li')
+        .classList.add('active-link');
     }
   }, [location]);
 
   return (
-    <nav className="navbar">
-      <ul className="nav-list">
+    <nav className={`navbar ${menuVisible ? 'active' : ''}`}>
+      <button
+        type="button"
+        className={`hamburger ${menuVisible ? 'active' : ''}`}
+        onClick={toggleMenu}
+        aria-label="Toggle Menu"
+      >
+        <div className="bar" />
+        <div className="bar" />
+        <div className="bar" />
+      </button>
+      <ul className={`nav-list ${menuVisible ? 'active' : ''}`}>
         <li className="logo-li">
           <img src="./logo.png" className="logo" alt="logo" />
-        </li>
-        <li className="home-li">
-          <NavLink to="/home">
-            <img className="home-link" src="./home.png" alt="home-link" />
-          </NavLink>
         </li>
         <li className="motorcycle-li">
           <NavLink to="/motorcycles" className="link">
@@ -72,14 +76,8 @@ const Navbar = () => {
           <SignoutButton />
         </li>
       </ul>
-      <Outlet />
     </nav>
   );
 };
 
-const mapStateToProps = (state) => ({
-  isAuthenticated: state.isAuthenticated,
-  username: state.username,
-});
-
-export default connect(mapStateToProps)(Navbar);
+export default Navbar;

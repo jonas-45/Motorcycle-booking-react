@@ -32,7 +32,7 @@ const Login = ({ dispatch }) => {
       }
       if (isAuthenticated) {
         dispatch(login(credentials.username));
-        navigate('/home');
+        navigate('/motorcycles');
       }
     } catch (error) {
       navigate('/');
