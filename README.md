@@ -1,70 +1,177 @@
-# Getting Started with Create React App
+<a name="readme-top"></a>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# 📗 Table of Contents
 
-## Available Scripts
+- [📗 Table of Contents](#-table-of-contents)
+- [🛵\[Booking Motorcycle\] ](#about-project)
+  - [📄\[Project Documentation\] ](#project-documentation)
+  - [Kanban Board](#kanban-board)
+  - [🛠 Built With ](#built-with)
+  - [Getting Started](#getting-started)
+    - [Prerequisites](#prerequisites)
+    - [Setup](#setup)
+    - [Install](#install)
+    - [Usage](#usage)
+    - [Run tests](#run-tests)
+  - [👥 Authors ](#authors)
+  - [🔭 Future Features ](#future-features)
+  - [🤝 Contributing ](#contributing)
+  - [⭐️ Show your support ](#️support)
+  - [🙏 Acknowledgments ](#acknowledgements)
+  - [📝 License ](#license)
 
-In the project directory, you can run:
+<!-- PROJECT DESCRIPTION -->
 
-### `npm start`
+# Booking Motorcycle 🛵 <a name="about-project"></a>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+This project is designed for the booking of Motorcycles. If you are preparing for a special day or event and you want a Motorcycle for it, this website is the best place for you. 
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Here are some of the benefits of using our website:
 
-### `npm test`
+- Wide selection of Motorcycles to choose from
+- Cool rides
+- Simple Bookings steps
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The main features of this website are:
 
-### `npm run build`
+- Users can view list of Motorcycles.
+- Users can view details of a motorcycle.
+- Users can add/list motorcycles.
+- Logged in users can reserve motorcycles. 
+- Logged in users can view their reservations. 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Project Documentation 📄 <a name="project-documentation"></a>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Back-end GitHub repository [link](https://github.com/jonas-45/motorcyle-booking)👈
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Built With 🛠️ <a name="built-with"></a>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- Programming Languages: CSS
+- Frameworks: React, Redux.
+- Code Editor: VS Code.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Getting Started <a name="getting-started"></a>
 
-## Learn More
+To get a local copy up and running follow these simple steps.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Prerequisites
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- A web browser like Google Chrome.
+- A code editor like Visual Studio Code with Git and Nodejs installed.
 
-### Code Splitting
+> You can check if Git is installed by running the following command in the terminal.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```
+$ git --version
+```
 
-### Analyzing the Bundle Size
+> Likewise for Node installation.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```
+$ node --version
+```
 
-### Making a Progressive Web App
+### Setup
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Clone the repository using the GitHub link provided below.
 
-### Advanced Configuration
+### Install
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+In the terminal, go to your file directory and run this command.
 
-### Deployment
+```
+mkdir motorcycle-app
+cd motorcycle-app
+$ git clone https://github.com/jonas-45/motorcycle-booking-react.git 
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### Usage
 
-### `npm run build` fails to minify
+### Run locally
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```
+$ cd motorcycle-booking-react
+```
+
+Install the required dependencies to run the project with this command:
+
+```
+$ npm install
+```
+
+Then run it in your browser with this command:
+
+```
+$ npm start -p 3001
+```
+
+Kindly modify the files as needed.
+
+### Run tests
+
+To run tests, please run this command
+
+```
+$ npm test
+```
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## Authors <a name="authors"></a>
+
+👤 **Jawad Nazari**
+
+- GitHub: [@Jawad-Nazari](https://github.com/Jawad-Nazari)
+- Twitter: [@Nazari_jawad58](https://twitter.com/Nazari_Jawad58)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/jawad-nazari/)
+
+👤 **Patrick Mukula**
+
+- GitHub: [@Patfarmurs](https://github.com/Patfarmurs)
+- Twitter: [@MukulayengeP](https://twitter.com/MukulayengeP)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/Patrick-Mukula/)
+
+👤  **Wullah Jonas Nuta**
+
+- GitHub: [@jonas-45](https://github.com/jonas-45)
+- Twitter: [@jonaswullah](https://twitter.com/jonaswullah)
+- LinkedIn: [jonas-wullah](https://linkedin.com/in/jonas-wullah)
+
+👤 **Ahmad Saeed**
+
+- Github: [GitHub](https://github.com/ehmaddd/)
+- Twitter: [Twitter](https://twitter.com/ehmaddd_pk)
+- Linkedin: [LinkedIn](https://www.linkedin.com/in/ehmaddd/)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 🔭Future Features <a name="future-features"></a>
+
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 🤝 Contributing <a name="contributing"></a>
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](https://github.com/jonas-45/motorcycle-booking-react/issues).
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## Show your support  <a name="️support"></a>
+
+Give a ⭐️ if you like this project!
+
+## Acknowledgments <a name="acknowledgements"></a>
+
+- [Microverse](https://www.microverse.org/)
+- Original design idea by [Murat Korkmaz on Behance](https://www.behance.net/muratk).
+
+## 📝 License <a name="license"></a>
+
+This project is [MIT](https://github.com/jonas-45/motorcycle-booking-react/blob/LICENSE.md) licensed.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
