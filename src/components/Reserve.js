@@ -43,7 +43,7 @@ const Reserve = () => {
   useEffect(() => {
     const fetchCurrentUser = async () => {
       try {
-        const response = await fetch(`http://localhost:3000/api/users/get_id?username=${username}`);
+        const response = await fetch(`http://localhost:3000/api/users/current_user_id?username=${username}`);
         const result = await response.json();
         const currentUser = result.id;
 
