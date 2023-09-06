@@ -52,11 +52,6 @@ const Navbar = () => {
             MOTORCYCLES
           </NavLink>
         </li>
-        <li className="reserve-li">
-          <NavLink to="/reserve" className="link">
-            RESERVE
-          </NavLink>
-        </li>
         <li className="reservation-li">
           <NavLink to="/reservations" className="link">
             MY RESERVATIONS

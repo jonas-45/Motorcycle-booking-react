@@ -2,7 +2,7 @@
 .navbar {
   top: 0;
   z-index: 100;
-  position: absolute;
+  position: sticky;
   width: 15rem;
   margin-right: 2rem;
   height: 100vh;
@@ -17,7 +17,7 @@
 }
 
 .nav-list li {
-  height: 2rem;
+  height: inherit;
   width: 12rem;
   padding-top: 1rem;
   padding-left: 0.5rem;
