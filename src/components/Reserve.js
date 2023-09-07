@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { NavLink } from 'react-router-dom';
 import '../stylesheets/reservations.css';
 import { useParams } from 'react-router';
 import { submitReservation, resetMessage } from '../redux/reservations/reservationsSlice';
+import './reserve.css';
 
 const Reserve = () => {
   const dispatch = useDispatch();
@@ -134,13 +136,15 @@ const Reserve = () => {
               </label>
             </div>
             <div className="add-reservation-button-container">
+              <NavLink to="/motorcycles" className="back-link">
+                B A C K
+              </NavLink>
               <button type="submit" className="add-reservation-button">
                 Add Reservation
               </button>
             </div>
           </form>
         </div>
-
       </div>
     </section>
   );
