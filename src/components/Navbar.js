@@ -45,7 +45,7 @@ const Navbar = () => {
       </button>
       <ul className={`nav-list ${menuVisible ? 'active' : ''}`}>
         <li className="logo-li">
-          <img src="./logo.png" className="logo" alt="logo" />
+          <img src={`${process.env.PUBLIC_URL}/logo.png`} className="logo" alt="logo" />
         </li>
         <li className="motorcycle-li">
           <NavLink to="/motorcycles" className="link">
