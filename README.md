@@ -5,14 +5,12 @@
 - [📗 Table of Contents](#-table-of-contents)
 - [🛵\[Booking Motorcycle\] ](#about-project)
   - [📄\[Project Documentation\] ](#project-documentation)
-  - [Kanban Board](#kanban-board)
   - [🛠 Built With ](#built-with)
   - [Getting Started](#getting-started)
     - [Prerequisites](#prerequisites)
     - [Setup](#setup)
     - [Install](#install)
     - [Usage](#usage)
-    - [Run tests](#run-tests)
   - [👥 Authors ](#authors)
   - [🔭 Future Features ](#future-features)
   - [🤝 Contributing ](#contributing)
@@ -165,6 +163,6 @@ Give a ⭐️ if you like this project!
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](https://github.com/jonas-45/motorcycle-booking-react/blob/LICENSE.md) licensed.
+This project is [MIT](./LICENSE) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
