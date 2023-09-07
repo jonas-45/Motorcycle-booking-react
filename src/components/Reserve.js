@@ -137,7 +137,7 @@ const Reserve = () => {
             </div>
             <div className="add-reservation-button-container">
               <NavLink to="/motorcycles" className="back-link">
-                B A C K
+                Back
               </NavLink>
               <button type="submit" className="add-reservation-button">
                 Add Reservation
