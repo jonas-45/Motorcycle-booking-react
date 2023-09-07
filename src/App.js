@@ -8,21 +8,19 @@ import Reservations from './components/Reservations';
 import AddMotorcycle from './components/AddMotorcycle';
 import MotorcycleDetail from './components/MotorcycleDetail';
 
-function App() {
-  return (
-    <Router>
-      <Routes>
-        {' '}
-        <Route path="/" element={<Login />} />
-        <Route path="/motorcycles/*" element={<Motorcycles />} />
-        <Route path="/motorcycles/:id/details" element={<MotorcycleDetail />} />
-        <Route path="/reserve/:id/:name" element={<Reserve />} />
-        <Route path="/reservations" element={<Reservations />} />
-        <Route path="/add-motorcycle" element={<AddMotorcycle />} />
-        <Route path="/delete-motorcycle" element={<DeleteMotorcycle />} />
-      </Routes>
-    </Router>
-  );
-}
+const App = () => (
+  <Router>
+    <Routes>
+      {' '}
+      <Route path="/" element={<Login />} />
+      <Route path="/motorcycles/*" element={<Motorcycles />} />
+      <Route path="/motorcycles/:id/details" element={<MotorcycleDetail />} />
+      <Route path="/reserve/:id/:name" element={<Reserve />} />
+      <Route path="/reservations" element={<Reservations />} />
+      <Route path="/add-motorcycle" element={<AddMotorcycle />} />
+      <Route path="/delete-motorcycle" element={<DeleteMotorcycle />} />
+    </Routes>
+  </Router>
+);
 
 export default App;
