@@ -35,7 +35,9 @@ const MotorcycleDetail = () => {
 
   return (
     <div className="motorcycle-details-container">
-      <Navbar />
+      <div className="detail-motorcycle-nav-container">
+        <Navbar />
+      </div>
       <div className="motorcycle-details-content">
         <img
           src={motorcycle.image}
@@ -65,9 +67,6 @@ const MotorcycleDetail = () => {
           </Link>
         </div>
       </div>
-      <Link to="/motorcycles" className="motorcycle-back-button">
-        Back
-      </Link>
     </div>
   );
 };

@@ -15,11 +15,11 @@ const Reservations = () => {
   }, [dispatch]);
 
   return (
-    <>
+    <div className="reservations-main-container">
       <section className="nav-container">
         <Navbar />
       </section>
-      <div className="reservations-main-container">
+      <div className="reservation-body">
         <section className="page-body">
           <div className="title-container">
             <h1 className="title">RESERVATIONS</h1>
@@ -44,14 +44,12 @@ const Reservations = () => {
                     <ReservationCard key={item.id} reserveItem={item} />
                   ))
                 )}
-
               </tbody>
             </table>
-
           </div>
         </section>
       </div>
-    </>
+    </div>
   );
 };
 

@@ -60,6 +60,12 @@
 
 /* Add styles for mobile screens */
 @media (max-width: 767px) {
+  .detail-motorcycle-nav-container {
+    top: 2rem;
+    left: 2rem;
+    background-color: #fff;
+  }
+
   .details-main-container {
     padding-top: 20px;
     padding-bottom: 20px;
@@ -69,7 +75,7 @@
   }
 
   .motorcycle-details-container {
-    flex-direction: column-reverse;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     padding-top: 0;
@@ -87,5 +93,8 @@
     position: static;
     width: 100%;
     text-align: center;
+  }
+  .motorcycle-back-button {
+    margin-right: 1rem;
   }
 }
