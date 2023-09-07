@@ -24,7 +24,7 @@
 
 # Booking Motorcycle 🛵 <a name="about-project"></a>
 
-This project is designed for the booking of Motorcycles. If you are preparing for a special day or event and you want a Motorcycle for it, this website is the best place for you. 
+This project is designed for the booking of Motorcycles. If you are preparing for a special day or event and you want a Motorcycle for it, this website is the best place for you.
 
 Here are some of the benefits of using our website:
 
@@ -37,8 +37,8 @@ The main features of this website are:
 - Users can view list of Motorcycles.
 - Users can view details of a motorcycle.
 - Users can add/list motorcycles.
-- Logged in users can reserve motorcycles. 
-- Logged in users can view their reservations. 
+- Logged in users can reserve motorcycles.
+- Logged in users can view their reservations.
 
 ## Project Documentation 📄 <a name="project-documentation"></a>
 
@@ -86,7 +86,7 @@ In the terminal, go to your file directory and run this command.
 ```
 mkdir motorcycle-app
 cd motorcycle-app
-$ git clone https://github.com/jonas-45/motorcycle-booking-react.git 
+$ git clone https://github.com/jonas-45/motorcycle-booking-react.git
 ```
 
 ### Usage
@@ -111,13 +111,6 @@ $ npm start -p 3001
 
 Kindly modify the files as needed.
 
-### Run tests
-
-To run tests, please run this command
-
-```
-$ npm test
-```
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Authors <a name="authors"></a>
