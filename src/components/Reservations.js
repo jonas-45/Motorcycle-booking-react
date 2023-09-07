@@ -15,41 +15,43 @@ const Reservations = () => {
   }, [dispatch]);
 
   return (
-    <div className="reservations-main-container">
+    <>
       <section className="nav-container">
         <Navbar />
       </section>
-      <section className="page-body">
-        <div className="title-container">
-          <h1 className="title">RESERVATIONS</h1>
-        </div>
-        <div className="reservations-container">
-          <table className="table">
-            <thead className="thead-dark">
-              <tr>
-                <th scope="col">#</th>
-                <th scope="col">Motorcycle</th>
-                <th scope="col">City</th>
-                <th scope="col">Date</th>
-              </tr>
-            </thead>
-            <tbody>
-              {reservationsState.loading ? (
-                <div className="spinner-border text-info" role="status">
-                  <span className="sr-only">Loading your reservations...</span>
-                </div>
-              ) : (
-                reservationsState.reservations.map((item) => (
-                  <ReservationCard key={item.id} reserveItem={item} />
-                ))
-              )}
+      <div className="reservations-main-container">
+        <section className="page-body">
+          <div className="title-container">
+            <h1 className="title">RESERVATIONS</h1>
+          </div>
+          <div className="reservations-container">
+            <table className="table">
+              <thead className="thead-dark">
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Motorcycle</th>
+                  <th scope="col">City</th>
+                  <th scope="col">Date</th>
+                </tr>
+              </thead>
+              <tbody>
+                {reservationsState.loading ? (
+                  <div className="spinner-border text-info" role="status">
+                    <span className="sr-only">Loading your reservations...</span>
+                  </div>
+                ) : (
+                  reservationsState.reservations.map((item) => (
+                    <ReservationCard key={item.id} reserveItem={item} />
+                  ))
+                )}
 
-            </tbody>
-          </table>
+              </tbody>
+            </table>
 
-        </div>
-      </section>
-    </div>
+          </div>
+        </section>
+      </div>
+    </>
   );
 };
 
