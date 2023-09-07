@@ -112,6 +112,11 @@ td {
   height: 1rem;
 }
 
+tbody {
+  top: 5px;
+  vertical-align: top;
+}
+
 @media (max-width: 768px) {
   .reservations-main-container {
     display: flex;
