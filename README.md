@@ -6,6 +6,7 @@
 - [🛵\[Booking Motorcycle\] ](#about-project)
   - [📄\[Project Documentation\] ](#project-documentation)
   - [🛠 Built With ](#built-with)
+  - [Kanban Board] (#kanban)
   - [Getting Started](#getting-started)
     - [Prerequisites](#prerequisites)
     - [Setup](#setup)
@@ -51,6 +52,17 @@ The main features of this website are:
 - Programming Languages: CSS
 - Frameworks: React, Redux.
 - Code Editor: VS Code.
+
+## Kanban Board <a name="kanban"></a>
+
+Link to Kanban Board : https://github.com/users/jonas-45/projects/2
+
+Initial Kanban Image Link : https://drive.google.com/file/d/16sQzZD1KlX3kav0lxuZAaiYQ6QtAF9At/view?usp=sharing
+
+Backend Github Repo Link : https://github.com/jonas-45/motorcyle-booking
+
+Frontend Github Repo Link :https://github.com/jonas-45/motorcycle-booking-react
+
 
 ## Getting Started <a name="getting-started"></a>
 
