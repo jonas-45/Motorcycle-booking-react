@@ -68,6 +68,11 @@
     margin-bottom: 2rem;
   }
 
+  input,
+  textarea {
+    margin-left: -2rem;
+  }
+
   .add-motorcycle-button-container {
     flex-direction: column;
     align-items: center;
