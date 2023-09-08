@@ -1,0 +1,95 @@
+.add-motorcycle-main-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100vh;
+}
+
+.add-motorcycle-content {
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+  margin-right: 3rem;
+  background-color: #efefef;
+}
+
+.add-motorcycle-form-container {
+  flex: 2;
+  padding: 20px;
+  width: 90%;
+}
+
+.add-motorcycle-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.add-motorcycle-input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+}
+
+.add-motorcycle-button-container {
+  display: flex;
+  justify-content: center;
+}
+
+.add-motorcycle-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #0056b3;
+  }
+}
+
+.success-message {
+  color: green;
+  font-weight: bold;
+  text-align: center;
+  margin: 1rem 0;
+}
+
+@media (max-width: 768px) {
+  .add-motorcycle-content {
+    flex-direction: column;
+    margin-right: 0;
+  }
+
+  .add-motorcycle-form-container {
+    flex: none;
+    margin-bottom: 2rem;
+  }
+
+  input,
+  textarea {
+    margin-left: -1rem;
+  }
+
+  .add-motorcycle-button-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .add-motorcycle-main-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+    flex-direction: column;
+  }
+
+  .add-motorcycle-main-container:first-child {
+    height: 100%;
+    width: 100%;
+  }
+}

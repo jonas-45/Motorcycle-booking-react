@@ -1,0 +1,125 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.reservation-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 5% 10%;
+  border: 1px solid #ccc;
+}
+
+.add-reservation-main-container {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+}
+
+.add-reservation-content {
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+  margin-right: 3rem;
+}
+
+.add-reservation-form-container {
+  flex: 2;
+  padding: 5%;
+  box-shadow: 1px 3px #888;
+}
+
+.add-reservation-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.add-reservation-input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+}
+
+.add-reservation-button-container {
+  display: flex;
+  justify-content: center;
+}
+
+.add-reservation-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #0056b3;
+  }
+}
+
+.success-message {
+  color: green;
+  font-weight: bold;
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.reservations-main-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  height: 100%;
+}
+
+.page-body {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  min-height: 100%;
+  background-color: #efefef;
+}
+
+.reservations-container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 1em;
+  margin: 0;
+}
+
+.table {
+  width: 100%;
+}
+
+td {
+  text-align: center;
+}
+
+.reservation-body {
+  width: 100%;
+}
+
+.thead-dark {
+  height: 1rem;
+}
+
+tbody {
+  top: 5px;
+  vertical-align: top;
+}
+
+@media (max-width: 768px) {
+  .reservations-main-container {
+    display: flex;
+    flex-direction: column;
+  }
+}

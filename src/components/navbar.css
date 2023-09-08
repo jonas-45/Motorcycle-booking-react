@@ -1,0 +1,103 @@
+/* Default styles for larger screens */
+.navbar {
+  top: 0;
+  z-index: 100;
+  position: sticky;
+  width: 15rem;
+  margin-right: 2rem;
+  height: 100vh;
+}
+
+.logo-li {
+  margin-bottom: 4rem;
+}
+
+.nav-list {
+  list-style: none;
+}
+
+.nav-list li {
+  height: inherit;
+  width: 12rem;
+  padding-top: 1rem;
+  padding-left: 0.5rem;
+  margin-top: 0.7rem;
+}
+
+li * {
+  text-decoration: none;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1.1rem;
+  font-weight: 900;
+  color: black;
+}
+
+.active-link {
+  background-color: #97bf0f;
+  padding-bottom: 12px;
+}
+
+.active-link * {
+  color: white;
+  font-size: 1.1rem;
+}
+
+.home-li {
+  padding: 1.5rem;
+}
+
+.home-link {
+  width: 3.5rem;
+}
+
+.logo {
+  width: 50%;
+  margin-top: 1rem;
+}
+
+.hamburger {
+  display: none;
+}
+
+/* Styles for mobile view */
+@media screen and (max-width: 768px) {
+  .navbar {
+    background-color: transparent;
+    position: fixed;
+    height: 100%;
+  }
+
+  .navbar.active {
+    transform: translateX(0);
+    width: 75vh;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    align-items: center;
+    display: none;
+  }
+
+  .nav-list.active {
+    display: flex;
+    margin-right: 5rem;
+  }
+
+  .hamburger {
+    display: block;
+    cursor: pointer;
+    margin-top: 1rem;
+  }
+
+  .bar {
+    width: 30px;
+    height: 3px;
+    background-color: black;
+    margin: 3px 0;
+  }
+
+  .logo {
+    width: 50%;
+    margin-top: 0;
+  }
+}

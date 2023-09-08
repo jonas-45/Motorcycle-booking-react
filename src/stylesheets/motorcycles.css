@@ -1,0 +1,152 @@
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+  .motorcycles-main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .page-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    position: relative;
+  }
+
+  .title-container {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+  }
+
+  .motorcycles-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 1em;
+    margin: 0;
+  }
+
+  .loading-indicator {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    align-items: center;
+  }
+
+  .card-img {
+    width: 100%;
+    border-radius: 0;
+  }
+
+  .pagination-container {
+    display: none;
+  }
+}
+
+/* Desktop-specific styles */
+@media (min-width: 768px) {
+  .title {
+    font-size: xx-large;
+    margin-bottom: 0.5rem;
+  }
+
+  .sub-title {
+    margin-top: 0;
+    margin-bottom: 2rem;
+    color: gray;
+  }
+
+  .motorcycles-main-container {
+    display: flex;
+  }
+
+  .page-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    position: relative;
+  }
+
+  .title-container {
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+  }
+
+  .motorcycles-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 1em;
+    margin: 0;
+  }
+
+  .loading-indicator {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    align-items: center;
+  }
+
+  .card-img {
+    width: 70%;
+    border-radius: 50%;
+  }
+
+  .pagination-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 10px;
+  }
+
+  .pagination-btn.previous {
+    order: 1;
+    margin-left: 5rem;
+    margin-top: 10rem;
+  }
+
+  .pagination-btn.next {
+    order: 2;
+    margin-top: 10rem;
+    margin-right: 1rem;
+  }
+
+  .pagination-btn {
+    background-color: #048a09;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+
+  .pagination-btn:hover {
+    background-color: #43e412;
+  }
+
+  .pagination-btn.disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+}

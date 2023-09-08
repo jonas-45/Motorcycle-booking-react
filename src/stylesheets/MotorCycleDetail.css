@@ -1,0 +1,101 @@
+.details-main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.details-nav-container {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  margin: 0;
+  width: 100%;
+}
+
+.motorcycle-details-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 20px;
+  position: relative;
+}
+
+.navbar {
+  flex: 1;
+  margin-right: 20px;
+  position: sticky;
+  top: 0;
+}
+
+.motorcycle-details-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.motorcycle-details-img {
+  max-width: 50%; /* Adjust the width of the image */
+  height: auto;
+}
+
+.motorcycle-reserve-button,
+.motorcycle-back-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff; /* Choose your preferred button color */
+  color: #fff; /* Text color */
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth hover transition */
+
+  /* Optional: Add hover effect */
+  &:hover {
+    background-color: #0056b3; /* Hover color */
+  }
+}
+
+/* Add styles for mobile screens */
+@media (max-width: 767px) {
+  .detail-motorcycle-nav-container {
+    top: 2rem;
+    left: 2rem;
+    background-color: #fff;
+  }
+
+  .details-main-container {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .motorcycle-details-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 0;
+    padding-bottom: 20px;
+  }
+
+  .motorcycle-details-img {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .navbar {
+    margin-right: 0;
+    margin-bottom: 20px;
+    position: static;
+    width: 100%;
+    text-align: center;
+  }
+
+  .motorcycle-back-button {
+    margin-right: 1rem;
+  }
+}
